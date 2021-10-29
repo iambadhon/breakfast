@@ -2,21 +2,20 @@ $(function () {
 
     //============================preloader section start============================//
     $(window).on("load", function () {
-        $(".preloader").delay(500).fadeOut(800);
+        $(".preloader").delay(300).fadeOut(300);
     });
     //============================preloader section end============================//
 
+
     //============================scroll to top section start============================//
     $(".scroll_to_top").click(function () {
-        $("html, body").animate({
-                scrollTop: 0,
-            },
-            1500
-        );
+        $("html,css").animate({
+            scrollTop: 0,
+        }, 1000);
     });
 
     $(window).scroll(function () {
-        var scrolling = $(this).scrollTop();
+        var scrolling = $(this).scrollTop()
 
         if (scrolling > 100) {
             $(".scroll_to_top").fadeIn(800);
@@ -49,9 +48,9 @@ $(function () {
         dots: true,
         autoplaySpeed: 4000,
         responsive: [{
-                breakpoint: 1024,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
@@ -73,4 +72,23 @@ $(function () {
     });
 
     //=====================slick slider end=====================//
+
+
+    //=====================smooth scroll start=====================//
+    var html_body = $('html, body');
+    $('nav a').on('click', function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                html_body.animate({
+                    scrollTop: target.offset().top - 0
+                }, 1000, );
+                return false;
+            }
+        }
+    });
+
+    //=====================smooth scroll end=====================//
+
 });
