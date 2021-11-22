@@ -1,17 +1,18 @@
 $(function () {
 
-    //============================preloader section start============================//
-    $(window).on("load", function () {
-        $(".preloader").delay(300).fadeOut(300);
-    });
-    //============================preloader section end============================//
+    //============================nav btn section start============================//
+    $('.nav_btn').click(function () {
+        $('.main_nav').toggleClass('nav_show');
+    })
+
+    //============================nav btn section end============================//
 
 
     //============================scroll to top section start============================//
     $(".scroll_to_top").click(function () {
         $("html,css").animate({
             scrollTop: 0,
-        }, 1000);
+        }, 00);
     });
 
     $(window).scroll(function () {
@@ -83,7 +84,7 @@ $(function () {
             if (target.length) {
                 html_body.animate({
                     scrollTop: target.offset().top - 0
-                }, 1000, );
+                }, 00, );
                 return false;
             }
         }

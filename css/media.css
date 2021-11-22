@@ -131,15 +131,6 @@
         width: 90%;
     }
 
-    .navbar-light .navbar-toggler {
-        color: rgb(255, 255, 255);
-        border-color: rgba(255, 255, 255, 0.77);
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: 0 0 5px 2px var(--first-color);
-    }
-
     .main_nav .menu {
         background: rgb(8, 8, 8, .9);
     }
@@ -335,15 +326,6 @@
 @media (min-width:576px) and (max-width:767px) {
     .main_nav img {
         width: 90%;
-    }
-
-    .navbar-light .navbar-toggler {
-        color: rgb(255, 255, 255);
-        border-color: rgba(255, 255, 255, 0.77);
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: 0 0 5px 2px var(--first-color);
     }
 
     .main_nav .menu {
@@ -557,15 +539,6 @@
 @media (max-width:575px) {
     .main_nav img {
         width: 80%;
-    }
-
-    .navbar-light .navbar-toggler {
-        color: rgb(255, 255, 255);
-        border-color: rgba(255, 255, 255, 0.77);
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: 0 0 5px 2px var(--first-color);
     }
 
     .main_nav .menu {
