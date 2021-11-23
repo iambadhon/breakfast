@@ -1,13 +1,4 @@
 $(function () {
-
-    //============================nav btn section start============================//
-    $('.nav_btn').click(function () {
-        $('.main_nav').toggleClass('nav_show');
-    })
-
-    //============================nav btn section end============================//
-
-
     //============================scroll to top section start============================//
     $(".scroll_to_top").click(function () {
         $("html,css").animate({

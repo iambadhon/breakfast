@@ -110,62 +110,66 @@ p {
     }
 }
 
-.nav_btn {
-    height: 32px;
-    width: 42px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--second-color);
-    padding: 5px 10px;
+.navbar .navbar-toggler {
+    padding: .2rem .6rem .4rem .6rem;
+    border-color: var(--second-color);
+    border-radius: 0rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    -ms-border-radius: 0rem;
+    -o-border-radius: 0rem;
 }
 
-.nav_btn .line1 {
-    height: 3px;
-    width: 26px;
-    background-color: var(--second-color);
-    transition: .4s;
-}
-
-.nav_btn .line2 {
-    height: 3px;
-    width: 26px;
-    background-color: var(--second-color);
-    transition: .4s;
-    margin: 4px 0;
-}
-
-.nav_btn .line3 {
-    height: 3px;
-    width: 26px;
-    background-color: var(--second-color);
-    transition: .4s;
-}
-
-.nav_show .line1 {
-    transform: rotate(45deg);
-    background: var(--first-color);
-}
-
-.nav_show .line2 {
-    opacity: 0;
-}
-
-.nav_show .line3 {
-    transform: rotate(-45deg);
-    margin-top: -14px;
-    background: var(--first-color);
-}
-
-.navbar-toggler {
-    border: none;
-    padding: 0;
-}
-
-.navbar-toggler:focus {
+.navbar .navbar-toggler:focus {
     box-shadow: none;
+}
+
+.navbar .navbar-toggler-icon {
+    width: 24px;
+    height: 19px;
+    background-image: none;
+    position: relative;
+    border-bottom: 3px solid var(--second-color);
+    transition: all .3s linear;
+}
+
+.navbar .navbar-toggler-icon::after,
+.navbar .navbar-toggler-icon::before {
+    width: 24px;
+    position: absolute;
+    height: 3px;
+    background-color: var(--second-color);
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all .3s linear;
+}
+
+.navbar .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background: var(--first-color);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: translateY(8px) rotate(-45deg);
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    -moz-transform: translateY(8px) rotate(-45deg);
+    -ms-transform: translateY(8px) rotate(-45deg);
+    -o-transform: translateY(8px) rotate(-45deg);
+    background: var(--first-color);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
 }
 
 /*======================nav section end======================*/
