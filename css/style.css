@@ -491,7 +491,7 @@ p {
 }
 
 #our_menu .our_menu_item .our_menu_item_img img {
-    max-width: 100%;
+    width: 100%;
 }
 
 #our_menu .our_menu_item .our_menu_item_text {
